@@ -43,7 +43,8 @@ def main():
                 return
 
         updatable.update(dt)
-        
+        player.cooldown_timer -= dt
+
         for asteroid in asteroids:
             if asteroid.collides_with(player):
                 log_event("player_hit")
